@@ -5,6 +5,10 @@
 <ng-template #elseBlock>
     
     <div *ngFor="let todo of todos; index as i">
+        <div class="body">
+            <div class="container">
     <app-todo-item [i]="i" [todo]="todo" (todoDelete)="deleteDolete($event)" (todoCheckbox)="toggleTodo($event)"></app-todo-item>
+</div>
+</div>
 </div>
 </ng-template>

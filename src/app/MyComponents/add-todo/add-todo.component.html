@@ -1,4 +1,4 @@
-<div class="my-3">
+<!-- <div class="my-3">
 
     <h4>Add Todos</h4>
     <form (ngSubmit)="onSubmit()">
@@ -14,4 +14,41 @@
     <button type="submit" class="btn btn-primary">Add Todo</button>
 </form>
 
-</div>
+</div> -->
+
+<header class="header">
+    <div class="header__inner container">
+      <h1 class="header__title">Todo-list</h1>
+      <form class="todo-form" (ngSubmit)="onSubmit()">
+        <div class="todo-form__group">
+          <input
+            type="text"
+            [(ngModel)]="title"
+            class="todo-form__input"
+            placeholder="Todo Title..."
+            name="title"
+          />
+        </div>
+        <div class="todo-form__group">
+          <textarea 
+          class="todo-form__textarea"
+          type="text" 
+          [(ngModel)]="desc"
+          name="desc"
+          >
+        </textarea>
+        </div>
+        <button class="btn btn--primary">Add Todo</button>
+      </form>
+      <!-- <div class="header__filters">
+        <div class="header__filters__item">
+          <span class="material-icons-outlined"> clear </span>
+          blue
+        </div>
+        <div class="header__filters__item">
+          <span class="material-icons-outlined"> clear </span>
+          completed
+        </div>
+      </div> -->
+    </div>
+  </header>
