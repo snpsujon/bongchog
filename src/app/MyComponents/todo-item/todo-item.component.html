@@ -1,0 +1,11 @@
+<div class="my-3">
+    <!-- <h3 [class]="todo?.active?'nostrick':'strick'">{{todo?.title}}</h3> -->
+    <h3 [ngClass]="{'strick':!todo?.active}">{{todo?.title}}</h3>
+    <p [ngClass]="{'strick':!todo?.active}">{{todo?.desc}}</p>
+    <div class="form-group form-check">
+        <input [checked]="!todo?.active" type="checkbox" class="form-check-input" id="active{{i}}" (click)="onCheckbox(todo)">
+        <label class="form-check-label" for="active{{i}}">Done</label>
+      </div>
+    <button class="btn btn-danger" (click)="onClick(todo)">Delete</button>
+
+</div>
